@@ -8,8 +8,13 @@ export default function Header() {
 
   const changeLanguage = (newLocale: string) => {
     const segments = pathname.split("/");
-    segments[1] = newLocale;
-    const newPath = segments.join("/");
+    const currentLocale = segments[1];
+    const isLocalePrefixed = ["ko", "en"].includes(currentLocale);
+
+    const newPath = isLocalePrefixed
+      ? `/${newLocale}${pathname.slice(currentLocale.length + 1)}`
+      : `/${newLocale}${pathname}`;
+
     router.push(newPath);
   };
 

@@ -2,6 +2,7 @@
   "Post": {
     "title": "title",
     "content": "content",
-    "post": "posting"
+    "submit": "Submit",
+    "success": "Posting Success"
   }
 }

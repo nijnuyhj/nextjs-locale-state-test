@@ -5,7 +5,9 @@ import { localeHeader } from "@/i18n/headers";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const isStaticFile = /\.(png|jpg|jpeg|svg|ico|webp)$/.test(pathname);
+  const isStaticFile =
+    /\.(png|jpg|jpeg|svg|ico|webp|js|css|json|txt|map)$/.test(pathname);
+
   if (
     pathname.startsWith("/api") ||
     pathname.startsWith("/_next") ||

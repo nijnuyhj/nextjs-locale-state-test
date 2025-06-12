@@ -2,6 +2,7 @@
   "Post": {
     "title": "제목",
     "content": "내용",
-    "post": "작성완료"
+    "submit": "제출하기",
+    "success": "게시글 작성 성공"
   }
 }
